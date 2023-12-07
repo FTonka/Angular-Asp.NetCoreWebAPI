@@ -1,0 +1,35 @@
+﻿@model EntityLayer.Concrete.Contact
+@{
+    ViewData["Title"] = "AddContact";
+    Layout = "~/Views/Shared/ContactsLayout.cshtml";
+}
+
+<h1>Kişi Ekle</h1>
+<form method="post" asp-action="AddContact" asp-controller="PhoneContact">
+    @Html.Label("Ad Soyaad")
+    <input type="text" class="form-control" asp-for=ContactName>
+    <span asp-validation-for="ContactName" style="color:red">   </span>
+    <br />
+    @Html.Label("Telefon")
+    <input type="text" class="form-control" asp-for=ContactPhone>
+    <span asp-validation-for="ContactPhone" style="color:red"></span>
+    <br />
+    @Html.Label("Meslek")
+    <input type="text" class="form-control" asp-for=ContactJob>
+    <br />
+    @Html.Label("Email")
+    <input type="text" class="form-control" asp-for=ContactEmail>
+    <span asp-validation-for="ContactEmail" style="color:red"></span>
+    <br />
+    @Html.Label("Adres")
+    <input type="text" class="form-control" asp-for=ContactAddress>
+    <br />
+    @Html.Label("Web Sayfası")
+    <input type="text" class="form-control" asp-for=ContactWebPage>
+    <br />
+    @Html.Label("Resim")
+    <input type="text" class="form-control" asp-for=ContactImage>
+
+    <button class="btn btn-primary">Kaydet</button>
+</form>
+

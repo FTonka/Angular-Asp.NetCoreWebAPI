@@ -1,0 +1,31 @@
+<a  class="btn btn-primary" routerLink="/contact/add">Yeni Kişi Ekle</a>
+<table class="table ">
+  <thead >
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">İsim</th>
+      <th scope="col">Telefon</th>
+      <th scope="col">Email</th>
+      <th scope="col">Meslek</th>
+      <th scope="col">Adres</th>
+      <th scope="col">Web Sayfası</th>
+      <th scope="col">Resim</th>
+      <th scope="col">Düzenle</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contact of contacts">
+      <th scope="row">{{contact.contactID}}</th>
+      <td>{{contact.contactName}}</td>
+      <td>{{contact.contactPhone}}</td>
+      <td>{{contact.contactEmail}}</td>
+      <td>{{contact.contactJob}}</td>
+      <td>{{contact.contactAddress}}</td>
+      <td>{{contact.contactWebPage}}</td>
+      <td>{{contact.contactImage}}</td>
+      <a style="position:absolute;" href="contact/{{contact.contactID}}"><button class="btn btn-warning" ><i class="bi bi-pencil-square"></i> Düzenle</button></a>
+        </tr>
+  </tbody>
+  </table>
+  <i class="fa-solid fa-pen-to-square"></i>

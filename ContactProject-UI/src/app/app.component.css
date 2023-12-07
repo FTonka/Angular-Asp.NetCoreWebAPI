@@ -1,0 +1,13 @@
+*{
+  font-size: 25px;
+}
+#centerText{
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  margin-top:15px;
+  padding-bottom:15px;
+}
+#addButton{
+  font-size:20px;
+}

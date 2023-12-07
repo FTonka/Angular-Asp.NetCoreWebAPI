@@ -1,0 +1,27 @@
+#personİnformation{
+  text-align: center;
+}
+*{
+  font-size: 16px;
+
+}
+.button {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+#updateBotton{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+#updateBotton button{
+  margin:10px;
+}
+#fixedbutton {
+  position: fixed;
+}
+.topBtn{
+  float: right;
+  margin-left: 25px;
+}

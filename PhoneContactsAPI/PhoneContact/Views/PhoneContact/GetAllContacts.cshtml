@@ -1,0 +1,42 @@
+﻿@using EntityLayer.Concrete
+@model List<Contact>
+@{
+    ViewData["Title"] = "GetAllContacts";
+    Layout = "~/Views/Shared/ContactsLayout.cshtml";
+}
+
+<h1>Rehberim</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>İsim</th>
+        <th>Telefon</th>
+        <th>Meslek</th>
+        <th>Email</th>
+        <th>Adres</th>
+        <th>Web Sayfası</th>
+        <th>Resim</th>
+        <th>İncele</th>
+        <th>Düzenle</th>
+        <th>Sil</th>
+
+    </tr>
+    @foreach(var item in Model){
+    <tr>
+        <td>@item.ContactID</td>
+        <td>@item.ContactName</td>
+        <td>@item.ContactPhone</td>
+        <td>@item.ContactJob</td>
+            <td>@item.ContactEmail.Substring(0,15) ...</td>
+        <td>@item.ContactAddress.Substring(0,15) ...</td>
+        <td>@item.ContactWebPage</td>
+        <td>@item.ContactImage</td>
+            <td><a class="btn btn-dark" href="/PhoneContact/GetContactById/@item.ContactID"><i class="fa-solid fa-eye"></i></a></td>
+            <td><a class="btn btn-warning" href="/PhoneContact/UpdateContact/@item.ContactID"><i class="fa-solid fa-pen-to-square"></i></a></td>
+            <td><a class="btn btn-danger" href="/PhoneContact/DeleteContact/@item.ContactID"><i class="fa-sharp fa-solid fa-trash"></i></a></td>
+
+ 
+    </tr>
+    }
+</table>
+

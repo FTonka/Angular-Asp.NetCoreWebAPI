@@ -1,0 +1,48 @@
+<div class="container">
+  <a routerLink="/contact" style="text-decoration:none"><button class="btn btn-dark"> <i class="bi bi-backspace"></i> Geri</button></a>
+
+    <button  class="btn btn-warning topBtn" (click)="OnUpdate()" >Güncelle</button>
+    <button  class="btn btn-danger topBtn" (click)="OnDelete()"  >Kişiyi Sil</button>
+
+  <h2 id="personİnformation">Kişi Bilgileri</h2>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Ad Soyad</label>
+    <input type="Text" class="form-control" [(ngModel)]="contact.contactName" >
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Telefon</label>
+    <input type="Text" class="form-control" [(ngModel)]="contact.contactPhone" >
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Meslek</label>
+    <input type="Text" class="form-control" [(ngModel)]="contact.contactJob" >
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Mail</label>
+    <input type="Text" class="form-control" [(ngModel)]="contact.contactEmail" >
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Adres</label>
+    <input type="textarea" class="form-control"[(ngModel)]="contact.contactAddress" >
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Web Sayfası</label>
+    <input type="textarea" class="form-control" [(ngModel)]="contact.contactWebPage" >
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Resim</label>
+    <input type="textarea" class="form-control" [(ngModel)]="contact.contactImage" >
+  </div>
+  <br>
+
+<div id="updateBotton">
+  <button  class="btn btn-success" (click)="OnSave()" >Kaydet</button>
+</div>
+</div>
+
